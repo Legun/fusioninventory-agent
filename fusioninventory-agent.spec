@@ -1,11 +1,11 @@
-Name: perl-FusionInventory-Agent
+Name: fusioninventory-agent
 Version: 2.3.6
 Release: 1%{?dist}
 Summary: Fusion Inventory agent
 License: GPL+
 Group: Development/Libraries
 URL: http://search.cpan.org/dist/FusionInventory-Agent/
-Source0: fusioninventory-agent-%{version}.tar.gz
+Source0: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 BuildRequires: perl >= 1:5.8.0
@@ -49,7 +49,7 @@ Requires: perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 This is the agent object.
 
 %prep
-%setup -q -n FusionInventory-Agent-%{version}
+%setup -q -n %{name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
